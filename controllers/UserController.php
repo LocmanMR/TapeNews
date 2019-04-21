@@ -54,6 +54,7 @@ class UserController
             if (!User::checkPassword($password)) {
                 $errors[] = 'Пароль не должен быть короче 6-ти символов';
             }
+
             $userId = User::checkUserData($email, $password);
 
             if ($userId == false) {
